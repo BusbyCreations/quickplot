@@ -1,0 +1,14 @@
+*.bzr
+*.o
+*~
+*.tmp
+*.d
+*.pro.user
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile
+
+QuickPlot
+libqwt.a
+
