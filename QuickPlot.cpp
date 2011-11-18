@@ -382,8 +382,9 @@ void Page5::initializePage()
 	plot->setCanvasBackground(Qt::white);
 
 	double xMin = data->x[0], xMax = data->x[0],
-		yMin = data->y[0], yMax = data->y[0],
-		xRaw[data->x.size()], yRaw[data->x.size()];
+		yMin = data->y[0], yMax = data->y[0];
+	double *xRaw = new double[data->x.size()];
+	double *yRaw = new double[data->x.size()];
 	for (unsigned int i = 0; i < data->x.size(); i++)
 	{
 		if (data->x[i] > xMax) xMax = data->x[i];
@@ -395,6 +396,8 @@ void Page5::initializePage()
 		yRaw[i] = data->y[i];
 	}
 	plot->rawData->setData(xRaw, yRaw, data->x.size());
+	delete xRaw;
+	delete yRaw;
 
 	double x[2], y[2];
 		x[0] = xMin - (xMax - xMin)/20.;
