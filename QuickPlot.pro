@@ -74,8 +74,6 @@ win32 {
 	message("Copying Qt dlls")
 	!exists($$OUT_PWD_A/QtGui4.dll): system(copy /Y \"$$QT_BIN_DIR_W\\QtGui4.dll\" \"$$OUT_PWD_A_W\\\")
 	!exists($$OUT_PWD_A/QtCore4.dll):system(copy /Y \"$$QT_BIN_DIR_W\\QtCore4.dll\" \"$$OUT_PWD_A_W\\\")
-	!exists($$OUT_PWD_A/QtSvg4.dll): system(copy /Y \"$$QT_BIN_DIR_W\\QtSvg4.dll\" \"$$OUT_PWD_A_W\\\")
-	!exists($$OUT_PWD_A/QtXml4.dll): system(copy /Y \"$$QT_BIN_DIR_W\\QtXml4.dll\" \"$$OUT_PWD_A_W\\\")
 
 	message("Copying Qwt dll")
 	!exists($$OUT_PWD_A/$$QWT_LIB_FILENAME):system(copy /Y \"$$QWT_LIB_DIR_W\\$$QWT_LIB_FILENAME\" \"$$OUT_PWD_A_W\\\")
