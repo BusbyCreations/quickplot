@@ -81,6 +81,12 @@ win32 {
 	!exists($$OUT_PWD_A/$$QWT_LIB_FILENAME):system(copy /Y \"$$QWT_LIB_DIR_W\\$$QWT_LIB_FILENAME\" \"$$OUT_PWD_A_W\\\")
 }
 
+linux-g++ {
+	message("This is linux")
+	LIBS += -lqwt-qt4
+	INCLUDEPATH += $$quote(/usr/include/qwt-qt4)
+}
+
 message(QMAKESPEC = $$QMAKESPEC)
 message(PWD = $$PWD)
 message(OUT_PWD = $$OUT_PWD)
