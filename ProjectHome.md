@@ -1,0 +1,1 @@
+QuickPlot is a simple program with a wizard-like interface which reads a tab-delimited text file with rows of data and plots the columns you select on a two dimensional graph. The program also performs a linear least-squares fit of the data and reports the slope and intercept.
